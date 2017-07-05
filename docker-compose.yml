@@ -2,11 +2,11 @@ version: '2'
 services:
   api:
     image: ieee0824/dummy-app:latest
-  nginx:
+  front-nginx:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
       - CROSS_DOMAIN=http://localhost
     ports:
-      - 8080:8080
+      - 80:80
